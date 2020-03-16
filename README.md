@@ -93,7 +93,7 @@ https://play.golang.org/p/DxK_WotOrUy
 
 5. Create a new Pull Request
 
-## Licenese
+## License
 
 ```
 Copyright 2020 EzySign

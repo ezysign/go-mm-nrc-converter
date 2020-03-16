@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-mm-nrc-prefix/converter"
+	"github.com/ezysign/go-mm-nrc-converter/converter"
 )
 
 func main() {

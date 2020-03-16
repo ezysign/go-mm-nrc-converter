@@ -107,27 +107,27 @@ func TestShouldRaiseErrorOnImproperNRCStrings(t *testing.T) {
 func TestConvertConvertToEnglishFormatnrc(t *testing.T) {
 	utils := NewNRCConverter()
 
-	// if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(နိုင်)၀၉၄၁၈၅"); result != "12/MaGaTa(C)094185" {
-	// 	t.Log("it Should return citizen in english")
-	// 	t.Fail()
-	// }
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(နိုင်)၀၉၄၁၈၅"); result != "12/MaGaTa(C)094185" {
+		t.Log("it Should return citizen in english")
+		t.Fail()
+	}
 
-	// if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(ဧည့်)၀၉၄၁၈၅"); result != "12/MaGaTa(AC)094185" {
-	// 	t.Log("it Should return foreign citizen in english")
-	// 	t.Fail()
-	// }
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(ဧည့်)၀၉၄၁၈၅"); result != "12/MaGaTa(AC)094185" {
+		t.Log("it Should return foreign citizen in english")
+		t.Fail()
+	}
 
-	// if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(ပြု)၀၉၄၁၈၅"); result != "12/MaGaTa(NC)094185" {
-	// 	t.Log("it Should return citizen in progress in english")
-	// 	t.Fail()
-	// }
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(ပြု)၀၉၄၁၈၅"); result != "12/MaGaTa(NC)094185" {
+		t.Log("it Should return citizen in progress in english")
+		t.Fail()
+	}
 
-	// if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(သ)၀၉၄၁၈၅"); result != "12/MaGaTa(M)094185" {
-	// 	t.Log("it Should return monk in english")
-	// 	t.Fail()
-	// }
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(သ)၀၉၄၁၈၅"); result != "12/MaGaTa(M)094185" {
+		t.Log("it Should return monk in english")
+		t.Fail()
+	}
 
-	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂစ(သီ)၀၉၄၁၈၅"); result != "12/MaGaTa(N)094185" {
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(သီ)၀၉၄၁၈၅"); result != "12/MaGaTa(N)094185" {
 		t.Log("it Should return nun NRC in english")
 		t.Fail()
 	}

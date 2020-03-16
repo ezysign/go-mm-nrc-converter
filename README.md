@@ -2,7 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/ezysign/go-mm-nrc-converter)](https://goreportcard.com/report/github.com/ezysign/go-mm-nrc-converter) [![Build Status](https://travis-ci.org/ezysign/go-mm-nrc-converter.svg?branch=master)](https://travis-ci.org/ezysign/go-mm-nrc-converter) [![GitHub issues](https://img.shields.io/github/issues/ezysign/go-mm-nrc-converter)](https://github.com/ezysign/go-mm-nrc-converter/issues) [![GitHub forks](https://img.shields.io/github/forks/ezysign/go-mm-nrc-converter)](https://github.com/ezysign/go-mm-nrc-converter/network) [![GitHub stars](https://img.shields.io/github/stars/ezysign/go-mm-nrc-converter)](https://github.com/ezysign/go-mm-nrc-converter/stargazers) [![GitHub license](https://img.shields.io/github/license/ezysign/go-mm-nrc-converter)](https://github.com/ezysign/go-mm-nrc-converter/blob/master/LICENSE.md)
 
-Go-mm-nrc-converter is a Burmese National Registration Card(NRC) tool written in Golang. Inspired by [NRC-Prefixer](https://github.com/greenlikeorange/NRCPrefix) and [Burther](https://github.com/vincent-paing/Burtha) for android
+Go-mm-nrc-converter is a Burmese National Registration Card(NRC) tool written in Golang. Inspired by [NRC-Prefixer](https://github.com/greenlikeorange/NRCPrefix) and [Burther](https://github.com/vincent-paing/Burtha) for android.
 
 ```go
 	nrcConverter := converter.NewNRCConverter()

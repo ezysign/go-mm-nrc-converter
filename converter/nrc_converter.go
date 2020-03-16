@@ -7,8 +7,8 @@ import (
 )
 
 type nrcconverter interface {
-	IsBurmeseNumber(number string) bool
-	IsEnglishNumber(number string) bool
+	isBurmeseNumber(number string) bool
+	isEnglishNumber(number string) bool
 	sanitizeBrackets(bracket string) string
 	convertEN2MMnumber(enNumber string) string
 	convertMM2ENnumber(mmNumber string) string
@@ -24,7 +24,7 @@ func NewNRCConverter() nrcconverter {
 	return &converter{}
 }
 
-func (converter *converter) IsBurmeseNumber(number string) bool {
+func (converter *converter) isBurmeseNumber(number string) bool {
 	mmNumber := "၀၁၂၃၄၅၆၇၈၉"
 	return strings.Contains(mmNumber, number)
 
@@ -41,7 +41,7 @@ func (converter *converter) sanitizeBrackets(bracket string) string {
 	return bracket
 }
 
-func (converter *converter) IsEnglishNumber(number string) bool {
+func (converter *converter) isEnglishNumber(number string) bool {
 	mmNumber := "0123456789"
 	return strings.Contains(mmNumber, number)
 
@@ -50,7 +50,7 @@ func (converter *converter) IsEnglishNumber(number string) bool {
 func (converter *converter) convertEN2MMnumber(number string) string {
 	char := []rune(number)
 	ascii := int(char[0])
-	if converter.IsEnglishNumber(number) == false {
+	if converter.isEnglishNumber(number) == false {
 		return number
 	}
 	return string(ascii + 4112)
@@ -59,7 +59,7 @@ func (converter *converter) convertEN2MMnumber(number string) string {
 func (converter *converter) convertMM2ENnumber(number string) string {
 	char := []rune(number)
 	ascii := int(char[0])
-	if converter.IsBurmeseNumber(number) == false {
+	if converter.isBurmeseNumber(number) == false {
 		return number
 	}
 	return string(ascii - 4112)

@@ -127,7 +127,7 @@ func TestConvertConvertToEnglishFormatnrc(t *testing.T) {
 		t.Fail()
 	}
 
-	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂတ(သီ)၀၉၄၁၈၅"); result != "12/MaGaTa(N)094185" {
+	if result, _ := utils.ConvertToEnglishFormat("၁၂/မဂစ(သီ)၀၉၄၁၈၅"); result != "12/MaGaCa(N)094185" {
 		t.Log("it Should return nun NRC in english")
 		t.Fail()
 	}
